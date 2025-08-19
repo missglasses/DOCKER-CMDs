@@ -1,0 +1,6 @@
+//run and name
+$ docker run -d --name colleague_project my_project
+//check if running 
+$ docker ps -f "name=colleague_project"
+//check logs
+> docker logs colleague_project
