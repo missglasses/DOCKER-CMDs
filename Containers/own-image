@@ -1,0 +1,35 @@
+//build a dockerfile creates an image
+docker build /......
+docker build .
+
+//name
+docker build -t first-image .
+
+//customize image: RUN <valid-shell-cmd>
+docker build .
+//build image
+docker build -t my_first_image . 
+
+//cmd 
+$ touch Dockerfile
+$ nano Dockerfile
+  FROM ubuntu (ctr+s ctr+x) //save and exit
+$ echo "RUN apt-get update" >> Dockerfile
+$ cat Dockerfile //FROM ubuntu 
+
+//edit 
+ echo "RUN mkdir my_app" >> Dockerfile
+  docker build -t my_app 
+
+//own dockerfile
+  //create file
+  touch Dockerfile 
+//add FROM instruction 
+echo "FROM ubuntu" >> Dockerfile
+//add RUN instruction
+echo "RUN apt-get update" >> Dockerfile
+echo "RUN apt-get install -y python3" >> Dockerfile
+//run to build image
+$ docker build -t my_python_image .
+
+//to be continued...
