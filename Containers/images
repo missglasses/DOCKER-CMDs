@@ -12,3 +12,18 @@ docker image rm image1
 
 //remove unused images also
 docker image prune -a
+
+//save image: docker save -o image.tar classify_spam:ver_num
+docker save -o spam_updated.tar spam:v2
+
+//pull container from registry 
+docker pull docker.mycompany.com/spam_alice:v3
+
+//run container
+docker run docker.mycompany.com/spam_alice:v3
+
+//load
+docker load -i spam_bob.tar
+
+//run container   
+docker run spam_bob:v3
